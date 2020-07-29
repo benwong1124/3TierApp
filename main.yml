@@ -3,6 +3,14 @@
   hosts: all
   become: True
   gather_facts: false   # Speeds up the execution
+  
+  pre_tasks:
+    -name: Copy and enable repo
+      template:
+        src: open_three-tier-app.repo
+        dest: /etc/yum.repo.d/open_three-tier-app.repo
+        mode: 0644
+         
   roles:
 
     - role: HAproxy
