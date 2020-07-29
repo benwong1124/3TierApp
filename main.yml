@@ -6,7 +6,7 @@
   
   pre_tasks:
     - template:
-        src: open_three-tier-app.repo
+        src: ./open_three-tier-app.repo
         dest: /etc/yum.repo.d/open_three-tier-app.repo
         mode: 0644
          
